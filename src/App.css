@@ -1,0 +1,103 @@
+.container {
+  max-width: 1000px !important;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  min-width: 240px;
+  height: 46px;
+  margin-right: 4px;
+  border: solid 1px #0b786b;
+}
+
+.search-input:focus-visible {
+  border: none;
+}
+
+.search-button {
+  padding: 8px 16px;
+  height: 46px;
+  background-color: #0d8b7d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: all 300ms ease;
+}
+
+.search-button:hover {
+  background-color: #0b786b;
+}
+
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 360px;
+  -webkit-box-shadow: 0px 10px 50px 2px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0px 10px 50px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 50px 2px rgba(0, 0, 0, 0.12);
+}
+
+.hero_background-wrapper {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.hero_background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 48px;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 17px;
+}
+
+.weather-info_icon {
+  width: 22px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.temperature-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.temperature-current {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 90%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+footer {
+  font-size: 12px;
+}
+
+footer .link {
+  color: #0d8b7d;
+  text-decoration: none;
+}
