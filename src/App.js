@@ -7,7 +7,16 @@ function App() {
       <Weather defaultCity="Regensburg" />
       <div className="container">
         <footer className="text-center">
-          This project was coded by Margo Wise and{" "}
+          This project was coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/margarita-wise/"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+          >
+            Margo Wise
+          </a>{" "}
+          and{" "}
           <a
             href="https://github.com/weisscodes/synoptik-weather-react-app"
             target="_blank"
