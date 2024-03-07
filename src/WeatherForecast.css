@@ -29,3 +29,9 @@
   opacity: 0.6;
   margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+  .WeatherForecast {
+    margin-top: 24px;
+  }
+}

@@ -111,9 +111,18 @@
 
   .hero-content {
     text-align: center;
+    padding: 16px 16px 40px;
   }
 
   .temperature-wrapper {
     justify-content: center;
+  }
+
+  .Weather h1 {
+    font-size: 36px;
+  }
+
+  .temperature-current {
+    font-size: 80px;
   }
 }
