@@ -3,11 +3,16 @@
   border-radius: 24px;
   border: solid 1px #0d8b7d;
   margin: 40px 0px;
+  padding: 0 20px;
 }
 
 .forecast-card {
-  padding: 32px;
-  border: solid 1px #0d8b7d;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 14px;
 }
 
 .forecast-icon {
@@ -17,6 +22,7 @@
 
 .forecast-description {
   opacity: 0.6;
+  font-size: 14px;
 }
 
 .forecast-temperature_min {
