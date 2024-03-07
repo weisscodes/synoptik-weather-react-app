@@ -4,11 +4,10 @@ import axios from "axios";
 import "./Weather.css";
 import logo from "./logo.svg";
 
-// 667d9f573c8af4c33457be5d561a9148
-
 function Weather(props) {
   const [city, setCity] = useState(props.defaultCity); // sent from the App component
   const [weatherData, setWeatherData] = useState({ ready: false }); // Instead of using a separate state
+
   function handleResponse(response) {
     setWeatherData({
       ready: true, // instead of calling setReady(true)
@@ -19,7 +18,8 @@ function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      date: new Date(response.data.dt * 1000),
+      date: new Date((response.data.dt + response.data.timezone) * 1000),
+      timezone: response.data.timezone,
     });
   }
 
@@ -42,8 +42,8 @@ function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather container">
-        <header className="row py-4">
-          <div className="col">
+        <header className="d-flex align-items-center flex-column-reverse flex-sm-row align-items-sm-center py-4">
+          <div className="col-12 col-sm-6 col-md-5">
             <form className="search-form" onSubmit={handleSubmit}>
               <input
                 type="search"
@@ -54,8 +54,8 @@ function Weather(props) {
               <input type="submit" value="Search" className="search-button" />
             </form>
           </div>
-          <div className="col text-end">
-            <img src={logo} alt="Synoptik Logo"></img>
+          <div className="col text-sm-end mb-3 mb-sm-0">
+            <img src={logo} alt="Synoptik Logo" className="img-fluid"></img>
           </div>
         </header>
         <WeatherInfo data={weatherData} />

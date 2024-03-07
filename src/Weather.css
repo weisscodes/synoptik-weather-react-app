@@ -1,12 +1,13 @@
 .search-form {
   display: flex;
+  width: 100%;
 }
 
 .search-input {
   padding: 12px;
   font-size: 16px;
   border-radius: 6px;
-  min-width: 240px;
+  width: 100%;
   height: 46px;
   margin-right: 4px;
   border: solid 1px #0b786b;
@@ -17,7 +18,7 @@
 }
 
 .search-button {
-  padding: 8px 16px;
+  padding: 8px 24px;
   height: 46px;
   background-color: #0d8b7d;
   color: white;
@@ -100,4 +101,18 @@
 
 .Weather h1 {
   font-size: 48px;
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .temperature-wrapper {
+    justify-content: center;
+  }
 }

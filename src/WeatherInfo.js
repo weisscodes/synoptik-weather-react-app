@@ -29,7 +29,7 @@ function WeatherInfo(props) {
             {props.data.city}, {props.data.country}
           </h1>
           <div className="weather-info-wrapper mt-3">
-            <div className="weather-info d-flex">
+            <div className="weather-info d-flex justify-content-center justify-content-sm-start">
               <div className="me-3">
                 <img
                   src="/assets/humidity-icon.svg"
@@ -52,7 +52,7 @@ function WeatherInfo(props) {
             </div>
             <div className="date-wrapper">
               <FormattedDate date={props.data.date} />
-              {/*Pass the date from an object to the component*/}
+              {/* Pass the date from an object to the component */}
             </div>
           </div>
         </div>
