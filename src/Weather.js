@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 import logo from "./logo.svg";
@@ -8,7 +9,6 @@ import logo from "./logo.svg";
 function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false }); // Instead of using a separate state
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true, // instead of calling setReady(true)
       city: response.data.name,
@@ -18,7 +18,7 @@ function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: "Monday, 16:00",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -86,7 +86,10 @@ function Weather(props) {
               <div className="weather-description text-capitalize">
                 {weatherData.description}
               </div>
-              <div className="date-wrapper">{weatherData.date}</div>
+              <div className="date-wrapper">
+                <FormattedDate date={weatherData.date} />
+                {/*Pass the date from an object to the component*/}
+              </div>
             </div>
           </div>
         </section>
@@ -94,11 +97,10 @@ function Weather(props) {
     );
   } else {
     const apiKey = "667d9f573c8af4c33457be5d561a9148";
-
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric
 `;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading";
+    return "Loading"; // change to Loader Spinner
   }
 }
 
