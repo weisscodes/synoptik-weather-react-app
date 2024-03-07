@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 // Recieving data from the Weather object
 
@@ -17,10 +18,10 @@ function WeatherInfo(props) {
         <div className="hero-content">
           <div className="temperature-wrapper mb-1">
             <div className="weather-icon">
-              <img src={props.data.iconUrl} alt={props.data.description}></img>
+              <WeatherIcon code={props.data.icon} />
             </div>
             <div className="temperature-current">
-              {Math.round(props.data.temperature)}{" "}
+              {Math.round(props.data.temperature)}
               <span className="temperature-unit">°C</span>
             </div>
           </div>

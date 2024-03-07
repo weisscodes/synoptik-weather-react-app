@@ -79,6 +79,12 @@
   align-items: center;
 }
 
+.weather-icon {
+  width: 80px;
+  height: auto;
+  margin-left: -12px;
+}
+
 .temperature-current {
   font-size: 100px;
   font-weight: bold;
@@ -90,7 +96,6 @@
   font-weight: 400;
   vertical-align: top;
   line-height: 1.8;
-  margin-left: -20px;
 }
 
 .Weather h1 {
