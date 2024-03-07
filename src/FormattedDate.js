@@ -10,7 +10,30 @@ function FormattedDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.date.getDay()];
+
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const day = days[props.date.getDay()];
+  const month = months[props.date.getMonth()];
+
+  let date = props.date.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+
   let hours = props.date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -22,7 +45,12 @@ function FormattedDate(props) {
   }
   return (
     <div>
-      {day}, {hours}:{minutes}
+      <div>
+        {day}, {hours}:{minutes}
+      </div>
+      <div>
+        {month} {date}
+      </div>
     </div>
   );
 }

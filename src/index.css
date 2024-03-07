@@ -2,7 +2,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #fafafa !important;
 }
 
 .container {
@@ -11,6 +11,7 @@ body {
 
 footer {
   font-size: 12px;
+  margin-bottom: 40px;
 }
 
 footer .link {

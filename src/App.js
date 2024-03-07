@@ -4,9 +4,9 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <Weather defaultCity="London" />
+      <Weather defaultCity="Regensburg" />
       <div className="container">
-        <footer className="mt-3 text-center">
+        <footer className="text-center">
           This project was coded by Margo Wise and{" "}
           <a
             href="https://github.com/weisscodes/synoptik-weather-react-app"

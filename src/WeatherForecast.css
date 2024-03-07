@@ -1,0 +1,29 @@
+.WeatherForecast {
+  background-color: #fff;
+  border-radius: 24px;
+  border: solid 1px #0d8b7d;
+  margin: 40px 0px;
+}
+
+.forecast-card {
+  padding: 32px;
+  border: solid 1px #0d8b7d;
+}
+
+.forecast-icon {
+  width: 60px;
+  height: auto;
+}
+
+.forecast-description {
+  opacity: 0.6;
+}
+
+.forecast-temperature {
+  margin-left: -8px;
+}
+
+.forecast-temperature_min {
+  opacity: 0.6;
+  margin-left: 8px;
+}

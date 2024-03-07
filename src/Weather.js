@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 import logo from "./logo.svg";
@@ -20,6 +21,7 @@ function Weather(props) {
       icon: response.data.weather[0].icon,
       date: new Date((response.data.dt + response.data.timezone) * 1000),
       timezone: response.data.timezone,
+      coordinates: response.data.coord,
     });
   }
 
@@ -60,6 +62,7 @@ function Weather(props) {
         </header>
         <WeatherInfo data={weatherData} />
         {/*Sending data from the Object to the component*/}
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
