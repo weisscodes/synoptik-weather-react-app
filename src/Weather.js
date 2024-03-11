@@ -57,7 +57,7 @@ function Weather(props) {
             </form>
           </div>
           <div className="col text-sm-end mb-3 mb-sm-0">
-            <img src={logo} alt="Synoptik Logo" className="img-fluid"></img>
+            <img src={logo} alt="Synoptik Logo" className="img-fluid" />
           </div>
         </header>
         <WeatherInfo data={weatherData} />

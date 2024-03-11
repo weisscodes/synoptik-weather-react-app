@@ -13,7 +13,7 @@ function WeatherInfo(props) {
             src="assets\weather-app-bg.svg"
             alt="synoptik-background"
             className="hero_background-image"
-          ></img>
+          />
         </div>
         <div className="hero-content">
           <div className="temperature-wrapper mb-1">
